@@ -1,6 +1,6 @@
 export default {
-  name: "product",
-  title: "Product",
+  name: "products",
+  title: "Products",
   type: "document",
   fields: [
     {
@@ -8,6 +8,7 @@ export default {
       title: "Image",
       type: "array",
       of: [{ type: "image" }],
+      validation: (Rule) => Rule.required(),
       options: {
         hotspot: true
       }
@@ -15,7 +16,8 @@ export default {
     {
       name: "name",
       title: "Name",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     },
     {
       name: "category",
@@ -33,6 +35,7 @@ export default {
     {
       name: "slug",
       title: "Slug",
+      validation: (Rule) => Rule.required(),
       type: "slug",
       options: {
         source: "name",
@@ -42,7 +45,8 @@ export default {
     {
       name: "price",
       title: "Price",
-      type: "number"
+      type: "number",
+      validation: (Rule) => Rule.required()
     },
     {
       name: "details",
@@ -56,7 +60,7 @@ export default {
     },
     {
       title: "Description",
-      name: "text",
+      name: "descriptionblock",
       type: "array",
       of: [{ type: "block" }]
     },
@@ -73,11 +77,12 @@ export default {
     },
     {
       name: "stockamount",
-      title: "number of items in stock",
-      type: "number"
+      title: "Number of items in stock",
+      type: "number",
+      validation: (Rule) => Rule.required()
     },
     {
-      title: "varieties",
+      title: "Varieties",
       name: "variety",
       type: "array",
       of: [{ type: "string" }]
