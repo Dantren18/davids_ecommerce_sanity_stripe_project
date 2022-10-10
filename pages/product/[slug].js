@@ -11,8 +11,11 @@ import { Product } from "../../components";
 
 import { useStateContext } from "../../context/StateContext";
 
-const ProductDetails = ({ product, products }) => {
-  const { image, name, details, price } = product;
+const ProductDetails = ({ product, products, newproducts }) => {
+  const { image, name, details, price, descriptiontext, text } = product;
+  // console.log(text[0].children[0].text, "text34232");
+
+  // text.map((text) => console.log(text, "text123"));
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
@@ -46,7 +49,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
         <div className="product-detail-desc">
           <h1>{name}</h1>
-          <div className="reviews">
+          {/* <div className="reviews">
             <div>
               <AiFillStar />
               <AiFillStar />
@@ -55,9 +58,9 @@ const ProductDetails = ({ product, products }) => {
               <AiOutlineStar />
             </div>
             <p>(20)</p>
-          </div>
+          </div> */}
           <h4>Details:</h4>
-          <p>{details}</p>
+          <p>{descriptiontext}</p>
           <p className="price">¥{price}</p>
           <div className="quantity">
             <h3>Quantity:</h3>
