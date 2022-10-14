@@ -81,6 +81,12 @@ export default {
       name: "variety",
       type: "array",
       of: [{ type: "string" }]
+    },
+    {
+      name: "varieties2",
+      title: "Varieties2",
+      type: "array",
+      of: [{ type: "metalItem" }]
     }
   ]
 };
