@@ -27,7 +27,7 @@ const Navbar = ({ toggle }) => {
     <>
       <nav className="Nav-Container">
         <div className="Nav-Container2">
-          <img src="/images/logo.png" />
+          <img src="/images/logo.png" href="/" />
           {/* <NavLogo to="/">LouLoudi</NavLogo> */}
           <div className="mobile-icon" onClick={toggle}>
             <FaBars />
@@ -51,6 +51,32 @@ const Navbar = ({ toggle }) => {
               <Link
                 activeClass="active"
                 className="NavLinks"
+                to="necklace"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Necklace
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                className="NavLinks"
+                to="earring"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Earring
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                className="NavLinks"
                 to="ring"
                 spy={true}
                 smooth={true}
@@ -64,33 +90,7 @@ const Navbar = ({ toggle }) => {
               <Link
                 activeClass="active"
                 className="NavLinks"
-                to="Necklace"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Necklace
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                className="NavLinks"
-                to="Earring"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Earring
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                className="NavLinks"
-                to="Bracelet"
+                to="bracelet"
                 spy={true}
                 smooth={true}
                 offset={-70}

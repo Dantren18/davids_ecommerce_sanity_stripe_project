@@ -25,16 +25,15 @@ const Home = ({
       {/* <Navbar toggle={toggle} /> */}
       <Banner />
       {/* <HeroBanner heroBanner={bannerData.length && bannerData[0]} /> */}
-      <div className="products-heading" id="ring">
+      <div className="products-heading" id="necklace">
         <h2>Necklace</h2>
-        <p>Speakers of many variations</p>
       </div>
       <div className="products-container">
         {necklaces?.map((necklace) => (
           <Product key={necklace._id} product={necklace} />
         ))}
       </div>
-      <div className="products-heading">
+      <div className="products-heading" id="earring">
         <h2>Earring</h2>
       </div>
       <div className="products-container">
@@ -42,7 +41,7 @@ const Home = ({
           <Product key={earring._id} product={earring} />
         ))}
       </div>
-      <div className="products-heading">
+      <div className="products-heading" id="ring">
         <h2>Rings</h2>
       </div>
       <div className="products-container">
@@ -50,7 +49,7 @@ const Home = ({
           <Product key={ring._id} product={ring} />
         ))}
       </div>
-      <div className="products-heading">
+      <div className="products-heading" id="bracelet">
         <h2>Bracelets</h2>
       </div>
       <div className="products-container">
